@@ -57,7 +57,7 @@ async def test_project(dut):
     dut.ui_in.value = 9 | 16
 
     await ClockCycles(dut.clk, 5)
-    dut._log.info(dut.number_one.value)
+    #dut._log.info(dut.number_one.value)
     dut.ui_in.value = 0 
     await ClockCycles(dut.clk, 5)
     
@@ -84,7 +84,7 @@ async def test_project(dut):
     dut.ui_in.value = 9 | 16
 
     await ClockCycles(dut.clk, 5)
-    dut._log.info(dut.number_one.value)
+    #dut._log.info(dut.number_one.value)
     dut.ui_in.value = 0 
     await ClockCycles(dut.clk, 5)
     
@@ -111,7 +111,7 @@ async def test_project(dut):
     dut.ui_in.value = 4 | 16
 
     await ClockCycles(dut.clk, 5)
-    dut._log.info(dut.number_one.value)
+    #dut._log.info(dut.number_one.value)
     dut.ui_in.value = 0 
     await ClockCycles(dut.clk, 5)
     
