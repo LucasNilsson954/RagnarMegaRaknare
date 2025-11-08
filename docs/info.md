@@ -1,20 +1,11 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+This is a calculator which can take in a four bit operand followed by an operation (addition, subtraction, multiplication or division) then another four bit number. The result will be outputted in an eight bit number. Division rounds upwards. Using zero as an operand is not supported, because Ragnar disapproves of the concept of zero, because no one deserves to be a zero.
 
 ## How to test
 
-Explain how to use your project
+Connect a hexadecimal keypad to the circuit then do your favorite calculations. Bits 0-3 are used for operands and operations while bit 4 is used for strobe, which activates shortly after pressing a button.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Some displays to display the result.
