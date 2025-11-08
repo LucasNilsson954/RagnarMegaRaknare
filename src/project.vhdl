@@ -55,9 +55,13 @@ begin
     strobe_ep <= strobe and (not strobe_sync);
 
     -- Save inputs to registers when strobe is active.
-    process(clk)
+    process(clk, rst_n)
     begin
-    if rising_edge(clk) then
+    if rst_n='0' then
+        number_one <= "0000";
+        number_two <= "0000";
+        operator <= "0000";
+    elsif rising_edge(clk) then
         
 
         if strobe_ep = '1' then
@@ -97,9 +101,13 @@ begin
     end process;
 
     
-    process(clk)
+    process(clk, rst_n)
     begin
-    if rising_edge(clk) then
+    if rst_n='0' then
+        result <= "00000000";
+        temp <= "0000";
+        division_iterations <= "00000000";
+    elsif rising_edge(clk) then
         if strobe_ep = '1' and not (unsigned(result) = to_unsigned(0, 8))  then
             result <= std_logic_vector(to_unsigned(0, 8));
             -- temp_result <= std_logic_vector(to_unsigned(0, 8));
